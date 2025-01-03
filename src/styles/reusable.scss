@@ -1,0 +1,84 @@
+@use './variables.scss' as *;
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.close-icon {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 20px;
+        background-color: #666;
+        top: 0;
+    }
+
+    &::before {
+        transform: rotate(45deg);
+        left: 9px;
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+        left: 9px;
+    }
+}
+
+.btn-primary {
+    background-color: $primary;
+    color: white;
+}
+
+.dotted-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.arrow-right {
+    border: solid $text-light;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 5px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    margin-right: 10px;
+}
+
+.arrow-left {
+    border: solid $text-light;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 5px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    margin-right: 10px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.bigger {
+    font-size: 1.125em;
+}
+
+.thin {
+    font-weight: lighter;
+    font-size: 0.875em;
+}
+
+body[data-theme='dark'] {
+    [class^='arrow-'] {
+        border-color: $text-dark;
+    }
+}

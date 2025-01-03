@@ -1,0 +1,32 @@
+.entity-info-bar {
+    margin-bottom: 1em;
+    &__main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        >h2 {
+            text-align: center;
+            text-wrap: nowrap;
+        }
+    }
+
+    &__info {
+        margin-top: 1em;
+        display: flex;
+        justify-content: space-around;
+        gap: 2em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .entity-info-bar {
+        &__main {
+            grid-template-columns: 1fr;
+            &__button-wrapper{
+                display: flex;
+                justify-content: center;
+                margin-bottom: 1em;
+            }
+        }
+    }
+}

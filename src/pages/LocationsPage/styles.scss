@@ -1,0 +1,22 @@
+.locations-page {
+    &__locations {
+        display: grid;
+        gap: 1em;
+        grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .locations-page {
+        &__locations {
+            grid-template-columns: repeat(auto-fill, minmax(49%, 1fr));
+        }
+    }       
+}
+@media screen and (max-width: 768px) {
+    .locations-page {
+        &__locations {
+            grid-template-columns: 1fr;
+        }
+    }       
+}

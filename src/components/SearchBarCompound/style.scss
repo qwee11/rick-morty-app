@@ -1,0 +1,40 @@
+.search-bar-compound {
+    &__main {
+        
+        margin-bottom: 1em;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        &__modal-button {
+            display: none;
+        }
+    }
+
+    &__advanced {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 1em;
+        margin-bottom: 1em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .search-bar-compound {
+        &__main {
+    
+            &__modal-button {
+                display: initial;
+            }
+        }
+        &__advanced {
+            display: none;
+        }
+
+        &__advanced.inModal {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

@@ -1,0 +1,72 @@
+@use '../../styles/variables.scss' as *;
+
+.character-page {
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        &__character-image {
+            margin: 0 auto;
+
+            display: flex;
+            flex-direction: column;
+
+            >img {
+                border: 5px solid $primary;
+                border-radius: 50%;
+                width: 70%;
+                margin: 0 auto;
+                margin-bottom: 1em;
+            }
+
+            >figcaption {
+                text-align: center;
+            }
+        }
+    }
+
+    &__info {
+        margin-top: 1em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+
+        &__attributes {
+
+            &__list {
+                margin-top: 0.5em;
+                margin-bottom: 1em;
+                list-style-type: none;
+            }
+        }
+
+        &__episodes {
+            &__list {
+                margin-top: 0.5em;
+                margin-bottom: 1em;
+                list-style-type: none;
+                overflow-y: auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .character-page {
+        &__header {
+            grid-template-columns: 1fr;
+            &__character-image {
+                > img {
+                    width: 100%;
+                }
+            }
+        }
+
+        &__info {
+            grid-template-columns: 1fr;
+        }
+    }
+}

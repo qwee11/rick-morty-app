@@ -1,0 +1,23 @@
+@use '../../styles/variables.scss' as *;
+
+.info-row {
+    &__heading {
+        font-size: 1.1em;
+        font-weight: bold;
+    }
+
+    &__info {
+        font-weight: 300;
+    }
+}
+
+.info-row-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+    }
+}

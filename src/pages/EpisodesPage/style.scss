@@ -1,0 +1,22 @@
+.episodes-page {
+    &__episodes {
+        display: grid;
+        gap: 1em;
+        grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .episodes-page {
+        &__episodes {
+            grid-template-columns: repeat(auto-fill, minmax(49%, 1fr));
+        }
+    }       
+}
+@media screen and (max-width: 768px) {
+    .episodes-page {
+        &__episodes {
+            grid-template-columns: 1fr;
+        }
+    }       
+}

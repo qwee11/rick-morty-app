@@ -1,0 +1,42 @@
+@use '../../styles/variables.scss' as *;
+
+.modal.visible {
+    display: flex;
+}
+
+.modal {
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 999;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.4);
+
+
+    &__content {
+        border-radius: 10px;
+        width: 80vw;
+        background-color: $bg-light;
+        padding: 10px;
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1em;
+        }
+    }
+}
+
+body[data-theme='dark'] {
+    .modal {
+        &__content {
+            background-color: $bg-dark;
+        }
+    }
+}
