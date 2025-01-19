@@ -77,7 +77,7 @@ const LocationsPage = () => {
                             {data?.locations.results.map(location => {
                                 return (
                                     <CompoundCard
-                                        linkTo={`/locations/${location.id}`}
+                                        linkTo={`/rick-morty-app/locations/${location.id}`}
                                         key={location.id + location.name}
                                         contained
                                         bigPadding >

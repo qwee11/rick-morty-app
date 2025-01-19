@@ -26,20 +26,20 @@ const LocationPage = () => {
                     <EntityInfoBar
                         headingTitle={data.location.name}
 
-                        additionalHeader1='Type'
-                        additionalInfo1={data.location.type}
+                        header1='Type'
+                        info1={data.location.type}
 
-                        additionalHeader2='Dimension'
-                        additionalInfo2={data.location.dimension}
+                        header2='Dimension'
+                        info2={data.location.dimension}
                     />
                     <div className='location-page__heading' >
-                        <p className='bold bigger' >
+                        <p className='text-bold text-bigger' >
                             Residents
                         </p>
                     </div>
                     <div className='location-page__residents' >
                         {data.location.residents.map(resident =>
-                            <CompoundCard key={resident.name + resident.id} linkTo={`/characters/` + resident.id} >
+                            <CompoundCard key={resident.name + resident.id} linkTo={`/rick-morty-app/characters/` + resident.id} >
                                 <CompoundCard.Image imageUrl={resident.image} />
                                 <CompoundCard.Title dottedText title={resident.name} />
                                 <CompoundCard.SubTitle title={resident.species} />

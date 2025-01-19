@@ -15,7 +15,7 @@ const Modal = ({ visible, title, setVisible, children }: props) => {
                     <h3>
                         {title}
                     </h3>
-                    <div className='close-icon' onClick={() => setVisible(false)} ></div>
+                    <div className='close-icon' onClick={() => setVisible(false)} />
                 </header>
                 {children}
             </div>

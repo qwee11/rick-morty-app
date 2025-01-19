@@ -75,8 +75,8 @@
 
             &__nav {
                 &__hamburger {
-                    position: relative;
                     z-index: 2;
+                    position: relative;
                     display: block;
                 }
                 &__hamburger.hamburger-open {

@@ -17,8 +17,8 @@
 
     transition: all .3s ease;
     &:hover {
-        transform: scale(1.02);
-        box-shadow: 0px 0px 15px -5px #000000;
+        transform: scale(103%);
+        box-shadow: 0px 0px 20px 0px #000000;
     }
 
     &__title {
@@ -27,11 +27,6 @@
 
     &__subtle-title {
         padding: 0 0 .5em 1em;
-
-        >p {
-            font-weight: 100;
-            font-size: .9em;
-        }
     }
 
     &__img {

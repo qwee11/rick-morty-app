@@ -47,7 +47,7 @@ const EpisodesPage = () => {
                 <>
                     <div className='episodes-page__episodes'>
                         {data?.episodes.results.map(episode =>
-                            <CompoundCard linkTo={`/episodes/${episode.id}`} key={episode.id + episode.name} contained bigPadding >
+                            <CompoundCard linkTo={`/rick-morty-app/episodes/${episode.id}`} key={episode.id + episode.name} contained bigPadding >
                                 <CompoundCard.Title dottedText title={episode.name} />
                                 <CompoundCard.SubTitle title={episode.episode} />
                             </CompoundCard>

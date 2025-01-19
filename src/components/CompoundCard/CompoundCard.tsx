@@ -13,7 +13,7 @@ const Title = ({ title, dottedText }: { title: string; dottedText?: boolean }) =
 const SubTitle = ({ title, dottedText }: { title: string; dottedText?: boolean }) => {
   return (
     <div className={`compound-card__subtle-title`}>
-      <p className={`${dottedText ? 'dotted-text' : ''}`}>{title}</p>
+      <p className={`${dottedText ? 'dotted-text' : ''} text-thin`}>{title}</p>
     </div>
   );
 };
@@ -26,8 +26,7 @@ const Image = ({ imageUrl }: { imageUrl: string }) => {
   );
 };
 
-const Card = ({ children, linkTo, bigPadding, contained, log }: { children: React.ReactNode; linkTo: string; bigPadding?: boolean; contained?: boolean, log?:boolean }) => {
-  log?console.log('render'):false;
+const Card = ({ children, linkTo, bigPadding, contained }: { children: React.ReactNode; linkTo: string; bigPadding?: boolean; contained?: boolean }) => {
   return (
     <NavLink to={linkTo}>
       <div className={`compound-card ${bigPadding ? 'big-padding' : ''} ${contained ? 'contained' : ''}`}>

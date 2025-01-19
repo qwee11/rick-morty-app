@@ -25,20 +25,20 @@ const EpisodePage = () => {
                     <EntityInfoBar
                         headingTitle={data.episode.name}
 
-                        additionalHeader1='Episode'
-                        additionalInfo1={data.episode.episode}
+                        header1='Episode'
+                        info1={data.episode.episode}
 
-                        additionalHeader2='Date'
-                        additionalInfo2={data.episode.air_date}
+                        header2='Date'
+                        info2={data.episode.air_date}
                     />
                     <div className='episode-page__heading' >
-                        <p className='bold bigger' >
+                        <h3>
                             Cast
-                        </p>
+                        </h3>
                     </div>
                     <div className="episode-page__cast">
                         {data.episode.characters.map(character =>
-                            <CompoundCard key={character.name + character.id} linkTo={`/characters/` + character.id} >
+                            <CompoundCard key={character.name + character.id} linkTo={`/rick-morty-app/characters/` + character.id} >
                                 <CompoundCard.Image imageUrl={character.image} />
                                 <CompoundCard.Title dottedText title={character.name} />
                                 <CompoundCard.SubTitle title={character.species} />

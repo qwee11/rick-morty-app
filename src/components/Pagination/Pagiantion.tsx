@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react'
 import './style.scss'
 
+const PAGES_BEFORE_CURRENT = 1;
+const PAGES_AFTER_CURRENT = 2;
+
 type props = {
     currentPage: number,
     setPage: (newState: number) => void,
@@ -13,12 +16,12 @@ const Pagiantion = ({ maxPage, currentPage, setPage }: props) => {
     useEffect(() => {
         let pages = [];
         if (currentPage === 1) {
-            for (let i = currentPage; i < currentPage + 3; i++) {
+            for (let i = currentPage; i < currentPage + PAGES_AFTER_CURRENT + 1; i++) {
                 pages.push(i);
             };
             setVisiblePages(pages);
         } else {
-            for (let i = currentPage - 1; i < currentPage + 2; i++) {
+            for (let i = currentPage - PAGES_BEFORE_CURRENT; i < currentPage + PAGES_AFTER_CURRENT; i++) {
                 pages.push(i);
             }
             setVisiblePages(pages);
@@ -49,7 +52,7 @@ const Pagiantion = ({ maxPage, currentPage, setPage }: props) => {
     return (
         <div className='pagination' >
             <button onClick={() => setPage(1)} >{'<<'}</button>
-            <button onClick={() => decreasePage()} >{'<'}</button>
+            <button onClick={decreasePage} >{'<'}</button>
             {visiblePages.map(page =>
                 <button
                     key={page}
@@ -60,7 +63,7 @@ const Pagiantion = ({ maxPage, currentPage, setPage }: props) => {
                     {page}
                 </button>
             )}
-            <button onClick={() => increasePage()} >{'>'}</button>
+            <button onClick={increasePage} >{'>'}</button>
             <button onClick={() => setPage(maxPage)} >{'>>'}</button>
         </div>
     )

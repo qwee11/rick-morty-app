@@ -64,17 +64,22 @@
     margin-right: 10px;
 }
 
-.bold {
+.text-bold {
     font-weight: bold;
 }
 
-.bigger {
+.text-bigger {
     font-size: 1.125em;
 }
 
-.thin {
-    font-weight: lighter;
-    font-size: 0.875em;
+.text-thin {
+    font-weight: 300;
+}
+
+@media screen and (max-width: 1300px) {
+    .container {
+        margin: 0 1em;
+    }
 }
 
 body[data-theme='dark'] {

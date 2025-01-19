@@ -3,18 +3,27 @@ import useGoBack from '../../hooks/useGoBack'
 
 type props = {
     headingTitle: string,
-    additionalHeader1: string,
-    additionalInfo1: string,
-    additionalHeader2: string,
-    additionalInfo2: string,
+    header1: string,
+    info1: string,
+    header2: string,
+    info2: string,
+}
+
+const AdditionalInfo = ({ header, info }: { header: string, info: string }) => {
+    return (
+        <div className="entity-info-bar__additional-info">
+            <p className="text-bold text-bigger">{header}</p>
+            <p className="smaller">{info}</p>
+        </div>
+    )
 }
 
 const EntityInfoBar = ({
     headingTitle,
-    additionalHeader1,
-    additionalInfo1,
-    additionalHeader2,
-    additionalInfo2,
+    header1,
+    info1,
+    header2,
+    info2,
 }: props) => {
     const useBack = useGoBack();
 
@@ -31,12 +40,10 @@ const EntityInfoBar = ({
             </div>
             <div className="entity-info-bar__info">
                 <div className="entity-info-bar__additional-info">
-                    <p className="bold bigger" >{additionalHeader1}</p>
-                    <p className="smaller" >{additionalInfo1}</p>
+                    <AdditionalInfo header={header1} info={info1} />
                 </div>
                 <div className="entity-info-bar__additional-info">
-                    <p className="bold bigger" >{additionalHeader2}</p>
-                    <p className="smaller" >{additionalInfo2}</p>
+                    <AdditionalInfo header={header2} info={info2} />
                 </div>
             </div>
         </header>

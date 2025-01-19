@@ -9,7 +9,7 @@ import EpisodePage from "./pages/EpisodePage/EpisodePage";
 import { Navigate, Route, Routes } from "react-router-dom";
 
 function App() {
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
   document.querySelector('body')!.setAttribute('data-theme', theme)
 
   return (
@@ -17,14 +17,14 @@ function App() {
       <Header theme={theme} setTheme={setTheme} />
       <main className="container">
         <Routes>
-          <Route path='/' element={<Navigate to={'/characters'} />} />
-          <Route path='/characters' element={<CharactersPage />} />
-          <Route path='/characters/:id' element={<CharacterPage />} />
-          <Route path='/locations' element={<LocationsPage />} />
-          <Route path='/locations/:id' element={<LocationPage />} />
-          <Route path='/episodes' element={<EpisodesPage />} />
-          <Route path='/episodes/:id' element={<EpisodePage />} />
-          <Route path='/error' element={<div>Error!</div>} />
+          <Route path='/rick-morty-app/' element={<Navigate to={'/rick-morty-app/characters'} />} />
+          <Route path='/rick-morty-app/characters' element={<CharactersPage />} />
+          <Route path='/rick-morty-app/characters/:id' element={<CharacterPage />} />
+          <Route path='/rick-morty-app/locations' element={<LocationsPage />} />
+          <Route path='/rick-morty-app/locations/:id' element={<LocationPage />} />
+          <Route path='/rick-morty-app/episodes' element={<EpisodesPage />} />
+          <Route path='/rick-morty-app/episodes/:id' element={<EpisodePage />} />
+          <Route path='/rick-morty-app/error' element={<h1>Error! Try again!</h1>} />
         </Routes>
       </main>
     </div>

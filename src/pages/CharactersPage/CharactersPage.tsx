@@ -78,7 +78,7 @@ const CharactersPage = () => {
                     <>
                         <div className='characters-page__characters' >
                             {data?.characters.results.map(character =>
-                                <CompoundCard linkTo={`/characters/${character.id}`} key={character.id + character.name} >
+                                <CompoundCard linkTo={`/rick-morty-app/characters/${character.id}`} key={character.id + character.name} >
                                     <CompoundCard.Image imageUrl={character.image} />
                                     <CompoundCard.Title title={character.name} />
                                     <CompoundCard.SubTitle title={character.species} />
